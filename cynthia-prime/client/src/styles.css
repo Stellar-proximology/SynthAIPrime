@@ -11,11 +11,3 @@
 .btn  { @apply rounded-xl px-4 py-2 font-medium border border-white/10 hover:bg-white/10 active:scale-[.99] transition; }
 .input{ @apply bg-white/5 rounded-xl p-3 w-full border border-white/10 focus:outline-none focus:ring-2 focus:ring-violet; }
 
-cynthia-prime/client/src/main.tsx
-
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
-import './styles.css';
-
-createRoot(document.getElementById('root')!).render(<App />);
