@@ -1,0 +1,25 @@
+// Optional future: If you later want Prisma, this schema mirrors the DB.
+// Runtime today uses better-sqlite3 for Termux stability.
+datasource db { provider = "sqlite"; url = "file:./cynthia.db" }
+
+generator client { provider = "prisma-client-js" }
+
+model Log {
+  id     String @id
+  ts     Int
+  input  String
+  output String
+  node   String
+  model  String
+  tokens Int
+  ms     Int
+}
+
+model Prompt {
+  id        String @id
+  name      String
+  body      String
+  createdAt Int
+  updatedAt Int
+  version   Int
+}
